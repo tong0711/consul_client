@@ -12,7 +12,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<docker.image.prefix>192.168.3.202:5000/</docker.image.prefix>
+		<docker.image.prefix>192.168.3.239:5000/</docker.image.prefix>
 	</properties>
 
 	<parent>
@@ -65,10 +65,10 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.4.13</version>
 				<configuration>
-					<imageName>192.168.3.202:5000/consulclient</imageName>
-					<newName>http://192.168.3.202:5000/consulclient</newName>
+					<imageName>192.168.3.239:5000/consulclient</imageName>
+					<newName>http://192.168.3.239:5000/consulclient</newName>
 					<serverId>docker-hub</serverId>
-					<registryUrl>http://192.168.3.202:5000</registryUrl>
+					<registryUrl>http://192.168.3.239:5000</registryUrl>
 					<!--<exposes>5000</exposes>-->
 					<dockerDirectory>src/main/docker</dockerDirectory>
 					<resources>

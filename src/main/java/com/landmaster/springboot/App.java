@@ -25,7 +25,7 @@ public class App {
      */
     @RequestMapping("/discover")
     public Object discover() {
-        return loadBalancer.choose("tomcat").getUri().toString();
+        return loadBalancer.choose("myspringcloud").getUri().toString();
     }
 
     /**
@@ -33,7 +33,7 @@ public class App {
      */
     @RequestMapping("/services")
     public Object services() {
-        return discoveryClient.getInstances("tomcat");
+        return discoveryClient.getInstances("myspringcloud").size();
     }
 
     @RequestMapping("/")
