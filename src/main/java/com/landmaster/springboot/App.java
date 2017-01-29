@@ -25,7 +25,7 @@ public class App {
      */
     @RequestMapping("/discover")
     public Object discover() {
-        return loadBalancer.choose("myspringcloud").getUri().toString();
+        return loadBalancer.choose("myspringcloud").isSecure();
     }
 
     /**
@@ -33,7 +33,7 @@ public class App {
      */
     @RequestMapping("/services")
     public Object services() {
-        return discoveryClient.getInstances("myspringcloud").size();
+        return discoveryClient.getInstances("myspringcloud").get(0);
     }
 
     @RequestMapping("/")
